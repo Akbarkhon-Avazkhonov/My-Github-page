@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Github page</title>
+    <title>Document</title>
+
 </head>
 <body>
-    <h1>Hello</h1>
+    
+    <img src="https://www.w3schools.com/js/pic_bulboff.gif" onclick="Turn()">
+
+    <input type="text" placeholder="Your wish">
+    <button onclick="Turn()">Make a wish</button>
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+
+        function Turn(){
+            var image = document.getElementsByTagName('img')[0];
+            let lamp = getRandomInt(2);
+            if( lamp == 1){
+                image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+            }else{
+                image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+            }
+        }
+
+    </script>
+  
 </body>
-</html>
+</html>     
